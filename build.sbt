@@ -6,7 +6,7 @@ version := "1.0"
 scalaVersion := "2.11.2"
 
 // Spark Information
-val sparkVersion = "2.1.2"
+val sparkVersion = "2.2.0"
 
 // allows us to include spark packages
 resolvers += "bintray-spark-packages" at
