@@ -1,3 +1,4 @@
+
 package com.study.job
 
 import org.apache.spark.sql.SparkSession
@@ -5,10 +6,12 @@ import org.apache.spark.sql.SparkSession
 /**
   * Created by jaesang on 2019-03-14.
   */
-class Job(spark: SparkSession, jobDesc: JobDescription) extends Serializable with Logger {
+class Job(spark: SparkSession) extends Serializable with SparkApp with Logger {
 
-  def run() = {
+  override def run(): Unit = {
 
+    //do something
   }
 
 }
+
