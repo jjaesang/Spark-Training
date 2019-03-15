@@ -25,6 +25,7 @@
         .option("port", 9999)
         .load()
 
+      import spark.implicits._
       val socketDs = socketStreamDf.as[String]
       val wordCountDs = socketDs.flatMap(_.split(" "))
         .groupBy("value")
