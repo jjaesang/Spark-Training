@@ -1,13 +1,12 @@
 package com.study.job
 
 import org.apache.spark.SparkConf
-import org.apache.spark.internal.Logging
 
 /**
   * Created by jaesang on 2019-03-15.
   * reference by : https://github.com/apache/incubator-s2graph/blob/master/spark/src/main/scala/org/apache/s2graph/spark/spark/SparkApp.scala*
   */
-trait SparkApp extends Logging {
+trait SparkApp {
 
   protected def args: Array[String] = _args
 

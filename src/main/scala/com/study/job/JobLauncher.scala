@@ -44,6 +44,7 @@ object JobLauncher extends Logger {
   def main(args: Array[String]): Unit = {
 
     val options = parseArguments(args)
+
     logger.info(s"Job Options : ${options}")
     println(options.toString)
 
