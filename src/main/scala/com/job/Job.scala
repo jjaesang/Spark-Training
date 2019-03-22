@@ -1,5 +1,5 @@
 
-package com.study.job
+package com.job
 
 import org.apache.spark.sql.SparkSession
 
