@@ -5,8 +5,11 @@ version := "1.0"
 
 scalaVersion := "2.11.2"
 
-// Spark Information
 val sparkVersion = "2.2.0"
+
+artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
+  artifact.name + "_" + sv.binary + "-" + sparkVersion + "_" + module.revision + "." + artifact.extension
+}
 
 // allows us to include spark packages
 resolvers += "bintray-spark-packages" at
