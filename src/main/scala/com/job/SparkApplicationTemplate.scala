@@ -1,5 +1,6 @@
 package com.job
 
+import com.job.config.ConfigLoader
 import org.apache.spark.sql.SparkSession
 
 /**
@@ -28,7 +29,12 @@ class SparkApplicationTemplate(spark : SparkSession) extends SparkJob[SparkAppli
     val input = options.input
     val output = options.output
 
-    val data = spark.read.format("parquet").load(input)
+    val simpleWordCountOperation = new SimpleWordCountOperation(spark)
+
+    //val data = spark.read.format("parquet").load(input)
+
+    val data = spark.sparkContext.textFile(input,1)
+    val wordCountRDD = simpleWordCountOperation.wordCount(data)
 
     /**
       * do Something like transform  using Job describe Class
@@ -38,7 +44,12 @@ class SparkApplicationTemplate(spark : SparkSession) extends SparkJob[SparkAppli
       * val result = sparkJobOperation.wordcount(data)
       */
 
-    data.write.parquet(output)
+
+    wordCountRDD.sortBy(-_._2)
+      .collect()
+      .foreach(row => println(row._1+"\t"+row._2))
+
+    //result.write.format("parquet").save(output)
 
   }
 
