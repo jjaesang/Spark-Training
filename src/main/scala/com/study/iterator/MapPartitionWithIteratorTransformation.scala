@@ -21,6 +21,9 @@ class MapPartitionWithIteratorTransformation {
       case ((value, colIndex), count) => columnInThisPart.contains(colIndex)
     }
 
+    /**
+      * Iterator를 받아 통계치를 담은 Iterator를 반환
+      */
     pairWithRanksInThisParts.flatMap {
       case ((value, colIndex), count) => {
 

@@ -1,0 +1,12 @@
+Apache Spark is a fast and general-purpose cluster computing system.
+It provides high-level APIs in Java, Scala, Python and R, and an optimized engine that supports general execution graphs.
+It also supports a rich set of higher-level tools including Spark SQL for SQL and structured data processing, MLlib for machine learning, GraphX for graph processing, and Spark Streaming.
+Security in Spark is OFF by default.
+This could mean you are vulnerable to attack by default.
+Please see Spark Security before downloading and running Spark
+Get Spark from the downloads page of the project website.
+This documentation is for Spark version 2.4.1.
+Spark uses Hadoop’s client libraries for HDFS and YARN.
+Downloads are pre-packaged for a handful of popular Hadoop versions.
+Users can also download a “Hadoop free” binary and run Spark with any Hadoop version by augmenting Spark’s classpath.
+Scala and Java users can include Spark in their projects using its Maven coordinates and in the future Python users can also install Spark from PyPI.
