@@ -38,7 +38,11 @@ libraryDependencies ++= Seq(
   "org.apache.logging.log4j" % "log4j-core" % "2.4.1",
 
   "com.github.scopt" %% "scopt" % "3.3.0",
-  "com.typesafe" % "config" % "1.2.1"
+  "com.typesafe" % "config" % "1.2.1",
+
+  "com.fasterxml.jackson.core" % "jackson-databind" % "2.9.8",
+  "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.9.8"
+
 
 
 )
